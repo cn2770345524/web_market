@@ -1,6 +1,8 @@
 package cn.liuhao.market.controller;
 
 import cn.liuhao.market.dao.UserDao;
+import cn.liuhao.market.entity.User;
+import cn.liuhao.market.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,6 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("pub")
 public class PubController {
 
+    @Autowired
+    UserService userService;
+
     @RequestMapping("login")
     public Object login(String username,String password){
 
@@ -16,9 +21,9 @@ public class PubController {
     }
 
     @RequestMapping("register")
-    public Object register(String username,String password){
+    public Object register(User user){
 
-        return null;
+        return userService.registerUser(user);
     }
 
 }
