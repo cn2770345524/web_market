@@ -1,4 +1,4 @@
-package cn.liuhao.web_market.util;
+package cn.liuhao.market.util;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTCreator;

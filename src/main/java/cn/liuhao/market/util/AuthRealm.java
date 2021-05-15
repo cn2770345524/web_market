@@ -1,4 +1,4 @@
-package cn.liuhao.web_market.util;
+package cn.liuhao.market.util;
 
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;

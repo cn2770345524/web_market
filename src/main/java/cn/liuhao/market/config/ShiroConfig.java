@@ -1,8 +1,7 @@
-package cn.liuhao.web_market.config;
+package cn.liuhao.market.config;
 
-import cn.liuhao.web_market.util.JwtHttpFilter;
+import cn.liuhao.market.util.JwtHttpFilter;
 import org.apache.shiro.spring.web.ShiroFilterFactoryBean;
-import org.apache.shiro.web.filter.mgt.DefaultFilterChainManager;
 import org.apache.shiro.web.mgt.DefaultWebSecurityManager;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
@@ -30,7 +29,7 @@ public class ShiroConfig {
         bean.setFilters(filter);
 
         Map<String, String> filterChian = new LinkedHashMap<>();
-        filterChian.put("/**", "anon");
+        filterChian.put("/web_markert/pub/**", "anon");
         bean.setFilterChainDefinitionMap(filterChian);
 
         return bean;
